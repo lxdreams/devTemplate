@@ -6,8 +6,6 @@ server:
     uri-encoding: UTF-8
     max-threads: 500
     min-spare-threads: 20
-  servlet:
-    context-path: /devTemplate
 
 #Spring
 spring:
@@ -18,9 +16,6 @@ spring:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
-  mvc:
-    #仅映射static资源文件
-    static-path-pattern: /static/**
   resources:
     #不为资源文件建立映射
     add-mappings: false

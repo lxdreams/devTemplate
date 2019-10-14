@@ -9,29 +9,28 @@
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
 		<!-- 数据库链接URL、用户名、密码 -->
-		 <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/dream?serverTimezone=UTC" userId="root" password="root">
+		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/test?serverTimezone=UTC" userId="root" password="root">
 		</jdbcConnection>
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 		<!-- 生成模型实体类的包名和位置 -->
-		<javaModelGenerator targetPackage="com.dreamfty.dream.admin.model" targetProject="src/main/java">
-			<property name="enableSubPackages" value="true" />
+		<javaModelGenerator targetPackage="com.dream.demo.entity" targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
-		
-		<!-- 生成的映射文件包名和位置 -->
-		<sqlMapGenerator targetPackage="com.dreamfty.dream.admin.mapper" targetProject="src/main/java">
-			<property name="enableSubPackages" value="true" />
-		</sqlMapGenerator>
-		
-		<!-- 生成DAO的包名和位置 -->
-		<javaClientGenerator type="XMLMAPPER" targetPackage="com.dreamfty.dream.admin.dao" targetProject="src/main/java">
-			<property name="enableSubPackages" value="true" />
-		</javaClientGenerator>
-		
-		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
-		<table tableName="system_logs" domainObjectName="SystemLogs" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
 
+		<!-- 生成的映射文件包名和位置 -->
+		<sqlMapGenerator targetPackage="mapper.user" targetProject="src/main/resources">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<!-- 生成DAO的包名和位置 -->
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.dream.demo.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
+		<table tableName="tb_user" domainObjectName="tbUser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
 	</context>
 </generatorConfiguration>
