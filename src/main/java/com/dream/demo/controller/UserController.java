@@ -14,7 +14,7 @@ public class UserController {
     @Autowired
     IUserService userService;
 
-    @RequestMapping("/go")
+    @RequestMapping("/")
     public String goUser(){
         return "index";
     }
