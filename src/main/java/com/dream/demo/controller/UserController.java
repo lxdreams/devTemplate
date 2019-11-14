@@ -4,6 +4,7 @@ import com.dream.demo.entity.User;
 import com.dream.demo.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -15,7 +16,8 @@ public class UserController {
     IUserService userService;
 
     @RequestMapping("/")
-    public String goUser(){
+    public String goUser(Model model){
+        model.addAttribute("users",userService.getAll(null));
         return "index";
     }
 

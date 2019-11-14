@@ -9,8 +9,22 @@
 </head>
 <body  style="background-color: #f1f1f1; padding-bottom: 0">
     <div th:replace="/common/top"></div>
-    <div class="col-md-8 col-md-offset-2">
-
+    <div class="col-md-6 col-md-offset-3">
+        <br><br><br><br><br>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>id</th>
+                <th>用户名</th>
+                <th>密码</th>
+                <th>角色</th>
+            </tr>
+            <tr th:each="user:${users}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.username}"></td>
+                <td th:text="${user.password}"></td>
+                <td th:text="${user.role}"></td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
