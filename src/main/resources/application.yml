@@ -48,3 +48,11 @@ server:
 #logging:
 #  level:
 #    com.dreamfty.dream.blog.dao.*: debug
+fdfs:
+  tracker-list:
+    - 106.54.246.26:22122
+  so-timeout: 1501
+  connect-timeout: 600
+  thumb-image:
+    height: 200
+    width: 200
