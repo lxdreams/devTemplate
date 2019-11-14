@@ -27,6 +27,5 @@ target/
 /.nb-gradle/
 build/
 /logs/
-src/main/resources/*.yml
 ### VS Code ###
 .vscode/
